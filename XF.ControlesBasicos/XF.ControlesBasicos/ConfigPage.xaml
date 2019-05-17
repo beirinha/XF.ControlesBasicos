@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF.ControlesBasicos.ConfigPage"
+             Disappearing="ContentPage_Disappearing">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Configurações"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <TableView>
+                <TableRoot>
+                    <TableSection>
+                        <SwitchCell x:Name="swEnviar" Text="Aceita receber e-mail" On="False" OnChanged="SwEnviar_OnChanged"></SwitchCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <Entry x:Name="txtEmail" Placeholder="Informe seu e-mail" IsVisible="False"></Entry>
+            <Button x:Name="btnVoltar" Text="Voltar" Clicked="BtnVoltar_Clicked"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
